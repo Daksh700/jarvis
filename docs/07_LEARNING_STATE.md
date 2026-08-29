@@ -29,15 +29,15 @@ Update **every week**, at the end of the session. Be brutally honest — an infl
 
 ---
 
-## Current state — last updated: **Week 1 end (Aug 2026)**
+## Current state — last updated: **Week 2 end (Aug 2026)**
 
 ### Foundations (Track 0)
 | Skill | Level | Notes |
 |---|---|---|
 | Terminal / shell | 🟡 | Pipes, redirection (`1>`/`2>`/`2>&1`), exit codes, `chmod`, `PATH` clear. Still shaky on: `PATH` modification. |
 | Bash scripting | 🟠 | Can read and write simple scripts. Knows `set -x`, `chmod +x`, `#!/bin/bash`. `status.sh` written and working. |
-| Git — daily commands | 🟠 | add/commit/push/branch work; merge conflicts cause anxiety |
-| Git — mental model | 🔴 | Commits, refs, rebase, reflog not understood |
+| Git — daily commands | 🟡 | add/commit/push/branch/merge comfortable. Relative refs (`HEAD^`, `HEAD~3`) clear. |
+| Git — mental model | 🟡 | Commits as snapshots+pointers, branches as pointers clear. `reflog` vs `git log` understood. Rebase mental model solid. Still shaky: merge conflicts in complex scenarios. |
 | HTTP / REST | 🟠 | Builds and calls APIs; status codes, headers, idempotency vague |
 | Auth (JWT/OAuth/API keys) | 🟠 | Uses Clerk; doesn't know what it does underneath |
 | Webhooks | 🟠 | Vionaut has one (Clerk→Svix); mechanism unclear |
@@ -113,3 +113,6 @@ Update **every week**, at the end of the session. Be brutally honest — an infl
 | Week 1 | Terminal / shell | 🟠 → 🟡 | Tutor chat + 18/18 L1 exercises. Child/parent process model clicked — why `cd` is a built-in. |
 | Week 1 | Bash scripting | 🔴 → 🟠 | xargs, awk, jq, pipelines, `set -x`, permissions — via exercises, not just reading. |
 | Week 1 end | Bash scripting | 🟠 | status.sh shipped — git branch, uncommitted count, last 5 commits |
+| Week 2 | Git — daily commands | 🟠 → 🟡 | Learn Git Branching complete, relative refs comfortable |
+| Week 2 | Git — mental model | 🔴 → 🟡 | Commits/branches as pointers clicked. Recovered 3 disasters with reflog. |
+| Week 2 | Security / secrets | 🟠 | .gitignore written, .env protected, git status verified — R17 enforced in code |

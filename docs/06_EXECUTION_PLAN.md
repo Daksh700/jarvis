@@ -34,15 +34,15 @@
 | (new in 2026, no 2020 equivalent) | L6: Packaging and Shipping Code |
 | (new in 2026, bonus) | L7: Agentic Coding |
 
-## Week 2 — Git properly
-- [ ] Learn Git Branching — complete Main + Remote sequences
-- [ ] Missing Semester **2026 L5**: Version Control and Git (the data-model explanation)
-- [ ] Read: Pro Git Ch. 1–3
-- [ ] Bookmark ohshitgit.com
-- [ ] **Deliverable:** break a scratch clone on purpose (bad rebase, `reset --hard`, detached HEAD), recover each with `reflog`
-- [ ] Can explain: what a commit *is*, branches as pointers, merge vs rebase, staging area
-- [ ] Write a `.gitignore` that provably protects `.env`
-- [ ] Update `07_LEARNING_STATE.md`
+## Week 2 — Git properly ✅
+- [x] Learn Git Branching — Main sequence + Push & Pull (Remote) complete
+- [x] Missing Semester **2026 L5**: Version Control and Git
+- [x] Read: Pro Git Ch. 1–3
+- [x] Bookmark ohshitgit.com
+- [x] **Deliverable:** scratch repo — `reset --hard`, detached HEAD, bad rebase — all 3 recovered with `reflog` ✅
+- [x] Can explain: commits as pointers, branches as pointers, `reflog` vs `git log`, staging area
+- [x] `.gitignore` written — `.env` + `.env.local` protected, verified with `git status`
+- [x] Update `07_LEARNING_STATE.md`
 
 ## Week 3 — HTTP, APIs, auth
 - [ ] MDN HTTP guide: Overview, Messages, Methods, Status codes, Headers, CORS
