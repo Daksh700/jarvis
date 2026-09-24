@@ -7,8 +7,8 @@
 ## 1. Current state pointer
 
 > **Phase:** -1 (Foundations)
-> **Week:** 3 of 8
-> **Active doc:** `06_EXECUTION_PLAN.md` → Week 3 (HTTP, APIs, auth)
+> **Week:** 4 of 8
+> **Active doc:** `06_EXECUTION_PLAN.md` → Week 4 (SQL & databases)
 > **Next gate:** Week 8 — can read Claude-written code and mark understood vs not understood
 > **Repo:** `/Users/dakshgoel/Desktop/jarvis` · public from day one
 

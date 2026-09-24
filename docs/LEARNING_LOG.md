@@ -42,3 +42,21 @@ Scratch repo mein deliberately teen disasters kiye aur `reflog` se recover kiya.
 ## Week 2 Complete — Aug 2026
 
 `.gitignore` banaya jarvis repo mein — `.env` aur `.env.local` dono protected. `git status` se verify kiya ki `.env` untracked nahi dikh raha. Commit aur push kiya. Yeh ek baar sahi karo toh phir secrets commit hone ka risk nahi — R17 (never push secrets) ab code mein enforce ho gayi. Week 2 done: git ka data model samajh aaya, reflog se teen disasters recover kiye, aur repo ko secrets ke liye safe banaya.
+
+---
+
+## Week 3, Session 1 — Sep 2026
+
+MDN HTTP guide padha — Overview, Messages, Methods, Status codes, Headers. HTTP stateless hai but cookies se sessions maintain hote hain. Request structure samjha — start line (method + path + version), headers, blank line, body. Response mein status code sabse important — 200 success, 401 unauthenticated, 403 authenticated but no permission, 404 not found, 429 rate limited, 500 server error. CORS samjha — browser ek origin ka JS doosre origin se data nahi maang sakta by default, server `Access-Control-Allow-Origin` header se allow karta hai.
+
+---
+
+## Week 3, Session 2 — Sep 2026
+
+Vionaut staging endpoints curl kiye. `/health` aur `/api/rates` bina auth ke 200 diya — `ratelimit` header mein Arcjet ka kaam dikha (30 req/min). `/api/trips` aur `/api/search/cities` ne 401 diya — `x-clerk-auth-status: signed-out` header se samajh aaya ki Clerk reject kar raha hai. Phir Clerk secret se test user banaya, session banaya, JWT token nikala — us token se `/api/trips` aur `/api/user/me` hit kiye, 200 mila. Bearer token ka flow ab crystal clear hai: secret → user → session → JWT → Authorization header.
+
+---
+
+## Week 3 Complete — Sep 2026
+
+DNS aur TLS bhi padha. DNS ka flow: browser → resolver (ISP) → root server → TLD → authoritative nameserver → IP. Glue records ne circular dependency solve kiya. TLS = encryption + authentication + data integrity. HTTPS = HTTP + TLS, port 443. Public/private key pair — public key se encrypt, private key se decrypt. Sabse valuable cheez: curl se apne hi Vionaut API ko hit kiya aur har header ka matlab samjha — rate limiting, auth status, content type — yeh sab ab real endpoints dekh ke samjha, sirf padhke nahi.

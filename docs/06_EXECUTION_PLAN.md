@@ -16,10 +16,10 @@
 - [x] 18/18 L1 exercises complete
 - [x] Bookmark explainshell.com, install `tldr`
 - [x] Concepts solid: quote types (`''`/`""`/`$''`), stdin/stdout/stderr, pipes, redirection (`1>` `2>` `2>&1`), exit codes, `&&`/`||`, child/parent process model, file permissions (`rwx`), `chmod +x`, `set -x`, pipelines
-- [ ] **Deliverable:** `status.sh` — prints Vionaut branch, uncommitted file count, last 5 commits ← **baki hai**
-- [ ] Init jarvis repo, push public
-- [ ] `LEARNING_LOG.md` first entry write karo
-- [ ] Update `07_LEARNING_STATE.md`
+- [x] **Deliverable:** `status.sh` — prints Vionaut branch, uncommitted file count, last 5 commits
+- [x] Init jarvis repo, push public
+- [x] `LEARNING_LOG.md` first entry write karo
+- [x] Update `07_LEARNING_STATE.md`
 
 **2026 lecture mapping (for rest of Phase -1):**
 | Original plan | 2026 equivalent |
@@ -45,12 +45,12 @@
 - [x] Update `07_LEARNING_STATE.md`
 
 ## Week 3 — HTTP, APIs, auth
-- [ ] MDN HTTP guide: Overview, Messages, Methods, Status codes, Headers, CORS
-- [ ] howdns.works comic
-- [ ] Cloudflare Learning Center: DNS, TLS basics
-- [ ] **Deliverable:** curl every Vionaut staging endpoint, document request/response shapes by hand
-- [ ] Can explain: idempotency, Bearer vs API key vs JWT, what Clerk+Svix webhook actually does, what Arcjet rate limiting does
-- [ ] Update `07_LEARNING_STATE.md`
+- [x] MDN HTTP guide: Overview, Messages, Methods, Status codes, Headers, CORS
+- [x] howdns.works comic
+- [x] Cloudflare Learning Center: DNS, TLS basics
+- [x] **Deliverable:** curl every Vionaut staging endpoint, document request/response shapes by hand
+- [x] Can explain: idempotency, Bearer vs API key vs JWT, what Clerk+Svix webhook actually does, what Arcjet rate limiting does
+- [x] Update `07_LEARNING_STATE.md`
 
 ## Week 4 — SQL & databases
 - [ ] SQLBolt (all lessons)
