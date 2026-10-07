@@ -53,11 +53,11 @@
 - [x] Update `07_LEARNING_STATE.md`
 
 ## Week 4 — SQL & databases
-- [ ] SQLBolt (all lessons)
-- [ ] Select Star SQL (at least half)
-- [ ] **Deliverable:** open local TekPOS Postgres, write raw SQL for 3 queries the app does via Prisma, compare output and shape
-- [ ] Can explain: JOIN types, indexes, transactions/ACID, N+1 problem, what `$transaction` protects against in TekPOS
-- [ ] Update `07_LEARNING_STATE.md`
+- [x] SQLBolt (all lessons)
+- [x] Select Star SQL (at least half)
+- [x] **Deliverable:** open local TekPOS Postgres, write raw SQL for 3 queries the app does via Prisma, compare output and shape
+- [x] Can explain: JOIN types, indexes, transactions/ACID, N+1 problem, what `$transaction` protects against in TekPOS
+- [x] Update `07_LEARNING_STATE.md`
 
 ## Week 5 — Docker for real
 - [ ] Docker "Get Started" official guide
