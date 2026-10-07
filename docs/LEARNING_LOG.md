@@ -41,7 +41,7 @@ Scratch repo mein deliberately teen disasters kiye aur `reflog` se recover kiya.
 
 ## Week 2 Complete — Aug 2026
 
-`.gitignore` banaya jarvis repo mein — `.env` aur `.env.local` dono protected. `git status` se verify kiya ki `.env` untracked nahi dikh raha. Commit aur push kiya. Yeh ek baar sahi karo toh phir secrets commit hone ka risk nahi — R17 (never push secrets) ab code mein enforce ho gayi. Week 2 done: git ka data model samajh aaya, reflog se teen disasters recover kiye, aur repo ko secrets ke liye safe banaya.
+`.gitignore` banaya jarvis repo mein — `.env` aur `.env.local` dono protected. `git status` se verify kiya ki `.env` untracked nahi dikh raha. Commit aur push kiya. Week 2 done: git ka data model samajh aaya, reflog se teen disasters recover kiye, aur repo ko secrets ke liye safe banaya.
 
 ---
 
@@ -60,3 +60,21 @@ Vionaut staging endpoints curl kiye. `/health` aur `/api/rates` bina auth ke 200
 ## Week 3 Complete — Sep 2026
 
 DNS aur TLS bhi padha. DNS ka flow: browser → resolver (ISP) → root server → TLD → authoritative nameserver → IP. Glue records ne circular dependency solve kiya. TLS = encryption + authentication + data integrity. HTTPS = HTTP + TLS, port 443. Public/private key pair — public key se encrypt, private key se decrypt. Sabse valuable cheez: curl se apne hi Vionaut API ko hit kiya aur har header ka matlab samjha — rate limiting, auth status, content type — yeh sab ab real endpoints dekh ke samjha, sirf padhke nahi.
+
+---
+
+## Week 4, Session 1 — Sep/Oct 2026
+
+SQLBolt ke lessons 1–18 kiye — SELECT, WHERE, ORDER BY, LIMIT/OFFSET, JOIN (INNER, LEFT, RIGHT, FULL), NULL handling (IS NULL / IS NOT NULL), aggregate functions (COUNT, SUM, AVG, MIN, MAX), GROUP BY, HAVING, subqueries, INSERT, UPDATE, DELETE, CREATE/ALTER/DROP TABLE, constraints (PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL). Lessons 18–19 (additional topics) skip kiye — woh optional extension tha. Sabse important concept: normalization — kyun alag tables mein data rakhte hain. JOIN ka mental model clear hua — ek common key pe do tables ko combine karo, ek bhi row miss nahi hoti INNER JOIN mein jab tak match ho.
+
+---
+
+## Week 4, Session 2 — Oct 2026
+
+Select Star SQL ke 3 chapters kiye (Beazley, Claims of Innocence, The Long Tail) — real Texas execution dataset pe queries chalai. GROUP BY practically samjha — WHERE filter pehle chalta hai, GROUP BY baad mein grouping karta hai, HAVING aggregation ke baad filter karta hai. Nested queries samjhi — outer query mein inner query ka result use karo percentage calculate karne ke liye. Chapter 4 nahi kiya is session mein.
+
+---
+
+## Week 4 Complete — Oct 2026
+
+TekPOS ke 3 real Prisma queries ko raw SQL mein convert kiya aur psql se local database pe chalaya (Postgres.app, `psql -U dakshgoel -d tekpos`). Query 1: simple SELECT with WHERE — 5 User rows mile (superadmin, owner, manager, cashier, chef). Query 2: INNER JOIN with Branch — Priya Nair ka branch "Koramangala" nikla. Query 3: Wastage + WastageItem JOIN — 1 row, expired chicken, 2.000 quantity, processed. Transaction ka purpose samjha: BEGIN → parent INSERT (RETURNING id) → children INSERT → COMMIT — agar beech mein fail ho toh ROLLBACK, orphan records nahi bante. `$transaction` isliye zaruri hai TekPOS mein — wastage aur wastage items ek saath ya dono nahi.

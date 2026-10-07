@@ -29,7 +29,7 @@ Update **every week**, at the end of the session. Be brutally honest — an infl
 
 ---
 
-## Current state — last updated: **Week 3 end (Sep 2026)**
+## Current state — last updated: **Week 4 end (Oct 2026)**
 
 ### Foundations (Track 0)
 | Skill | Level | Notes |
@@ -41,8 +41,8 @@ Update **every week**, at the end of the session. Be brutally honest — an infl
 | HTTP / REST | 🟡 | Builds and calls APIs; status codes, headers, idempotency vague |
 | Auth (JWT/OAuth/API keys) | 🟡 | Uses Clerk; doesn't know what it does underneath |
 | Webhooks | 🟠 | Vionaut has one (Clerk→Svix); mechanism unclear |
-| SQL | 🔴 | **Biggest gap.** Runs Prisma/Mongoose without knowing generated SQL |
-| Database concepts (indexes, transactions, ACID) | 🔴 | Follows TekPOS `$transaction` rule without knowing why |
+| SQL | 🟡 | **Biggest gap.** Runs Prisma/Mongoose without knowing generated SQL |
+| Database concepts (indexes, transactions, ACID) | 🟡 | Follows TekPOS `$transaction` rule without knowing why |
 | Docker | 🟠 | Runs containers; images vs volumes vs layers undifferentiated (→ 228 GB `Docker.raw`) |
 | Linux / servers / SSH | 🟠 | Deploys TekPOS via runbook; systemd, permissions, logs unclear |
 | Networking (ports, TCP, DNS) | 🟠 | |
@@ -119,3 +119,5 @@ Update **every week**, at the end of the session. Be brutally honest — an infl
 | Week 3 | HTTP / REST | 🟠 → 🟡 | curl se apne Vionaut endpoints hit kiye — har header ka matlab samjha live |
 | Week 3 | Auth | 🟠 → 🟡 | Bearer token flow crystal clear — secret → user → session → JWT → header |
 | Week 3 | Networking/DNS | 🔴 → 🟠 | DNS flow + TLS basics — howdns.works + Cloudflare |
+| Week 4 | SQL | 🔴 → 🟡 | SQLBolt + Select Star SQL + TekPOS pe raw queries chalai — JOIN aur GROUP BY hands-on kiya |
+| Week 4 | Database concepts | 🔴 → 🟡 | $transaction ka purpose samjha — BEGIN/COMMIT/ROLLBACK TekPOS wastage example se |
