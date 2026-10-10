@@ -60,11 +60,11 @@
 - [x] Update `07_LEARNING_STATE.md`
 
 ## Week 5 — Docker for real
-- [ ] Docker "Get Started" official guide
-- [ ] Julia Evans — How Containers Work
-- [ ] **Deliverable:** write `docker-compose.yml` from scratch for TekPOS Postgres, named volume, documented `pg_dumpall` backup command
-- [ ] Can explain: image vs container vs volume, layers & build cache (why `Docker.raw` hit 228 GB), which `prune` commands destroy data
-- [ ] Update `07_LEARNING_STATE.md`
+- [x] Docker "Get Started" official guide
+- [-] Julia Evans — How Containers Work - skipped — deliverable complete without it, Next bucket
+- [x] **Deliverable:** write `docker-compose.yml` from scratch for TekPOS Postgres, named volume, documented `pg_dumpall` backup command
+- [x] Can explain: image vs container vs volume, layers & build cache (why `Docker.raw` hit 228 GB), which `prune` commands destroy data
+- [x] Update `07_LEARNING_STATE.md`
 
 ## Week 6 — Linux, servers, deployment
 - [ ] DigitalOcean tutorials: SSH keys, users & permissions, systemd, ufw

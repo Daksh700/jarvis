@@ -78,3 +78,17 @@ Select Star SQL ke 3 chapters kiye (Beazley, Claims of Innocence, The Long Tail)
 ## Week 4 Complete — Oct 2026
 
 TekPOS ke 3 real Prisma queries ko raw SQL mein convert kiya aur psql se local database pe chalaya (Postgres.app, `psql -U dakshgoel -d tekpos`). Query 1: simple SELECT with WHERE — 5 User rows mile (superadmin, owner, manager, cashier, chef). Query 2: INNER JOIN with Branch — Priya Nair ka branch "Koramangala" nikla. Query 3: Wastage + WastageItem JOIN — 1 row, expired chicken, 2.000 quantity, processed. Transaction ka purpose samjha: BEGIN → parent INSERT (RETURNING id) → children INSERT → COMMIT — agar beech mein fail ho toh ROLLBACK, orphan records nahi bante. `$transaction` isliye zaruri hai TekPOS mein — wastage aur wastage items ek saath ya dono nahi.
+
+---
+
+## Week 5, Session 1 — Oct 2026
+
+Docker ke 5 core concepts pages padhe — What is a container, What is an image, What is Docker Compose, Understanding image layers, Persisting container data. Container ka mental model clear hua: isolated process hai, apna filesystem lekar chalta hai. Image = read-only blueprint, container = image ka running instance. Layers ka caching samjha — unchanged layers reuse hote hain, isliye `Docker.raw` 228 GB tak pohoncha tha (har build pe naye layers add hote rahe, purane delete nahi kiye).
+
+Hands-on kiya: ubuntu container ke andar Node install kiya, `docker container commit` se naya image banaya, `docker image history` se layers dekhe — "Add node" aur "Add app" dono clearly dikhe. Bind mount (`./:/app`) aur named volume ka fark samjha — bind mount dev ke liye live sync, named volume data persist karne ke liye.
+
+---
+
+## Week 5 Complete — Oct 2026
+
+TekPOS ke liye `docker-compose.yml` scratch se banaya — Postgres 16, named volume `tekpos_data`, correct environment variables. `docker compose up -d` se container start kiya, `pg_dumpall` se backup file banayi (`tekpos_backup.sql`, 3.6K). `docker compose down` ke baad dobara up kiya — data safe raha, volume persist hua. `psql` se verify kiya ki container chal raha hai. `tekpos_backup.sql` ko `.gitignore` mein add kiya. Declarative config ka fayda practically samjha — Compose khud figure out karta hai kya change hua, sirf diff apply karta hai.
