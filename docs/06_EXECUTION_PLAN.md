@@ -66,15 +66,18 @@
 - [x] Can explain: image vs container vs volume, layers & build cache (why `Docker.raw` hit 228 GB), which `prune` commands destroy data
 - [x] Update `07_LEARNING_STATE.md`
 
-## Week 6 — Linux, servers, deployment
-- [ ] DigitalOcean tutorials: SSH keys, users & permissions, systemd, ufw
-- [ ] Missing Semester **2026 L2**: Command-line Environment (processes, job control, dotfiles, remote machines)
-- [ ] Missing Semester **2026 L6**: Packaging and Shipping Code (bonus — useful for JARVIS deploy)
-- [ ] Missing Semester **2020 L9**: Security & Cryptography (2020 only — crypto basics, still worth watching)
-- [ ] Read PM2 docs properly (currently used blind on TekPOS)
-- [ ] **Deliverable:** SSH into Hostinger, find the TekPOS process, read its logs, check disk usage — no runbook
-- [ ] Can explain: SSH key asymmetry, systemd units, cron, `journalctl`
-- [ ] Update `07_LEARNING_STATE.md`
+## Week 6 — Linux, servers, deployment ✅ (modified)
+> **Note:** TekPOS Hostinger pe deployed nahi hai. SSH deliverable Railway exploration se replace hua.
+- [x] DigitalOcean: SSH keys (Steps 1–4, read-only), permissions, systemd basics
+- [x] Missing Semester 2026 L2 — already done in Week 1
+- [-] Missing Semester 2026 L6: Packaging and Shipping Code — skipped (bonus), Next bucket
+- [x] Missing Semester **2020 L9**: Security & Cryptography (2020 only — crypto basics, still worth watching)
+- [-] PM2 docs — skipped, TekPOS deployed nahi hai
+- [-] Original deliverable (SSH into Hostinger) — no server available
+- [x] Replacement deliverable: Railway logs, deploy config, build logs explored
+- [x] Can explain: SSH key asymmetry, systemd lifecycle, restart policy
+- [ ] cron, `journalctl` — not covered, Next bucket
+- [x] Update `07_LEARNING_STATE.md`
 
 ## Week 7 — How programs actually run
 - [ ] Crash Course Computer Science ep. 1–20 (gym/commute)

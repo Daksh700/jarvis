@@ -92,3 +92,17 @@ Hands-on kiya: ubuntu container ke andar Node install kiya, `docker container co
 ## Week 5 Complete — Oct 2026
 
 TekPOS ke liye `docker-compose.yml` scratch se banaya — Postgres 16, named volume `tekpos_data`, correct environment variables. `docker compose up -d` se container start kiya, `pg_dumpall` se backup file banayi (`tekpos_backup.sql`, 3.6K). `docker compose down` ke baad dobara up kiya — data safe raha, volume persist hua. `psql` se verify kiya ki container chal raha hai. `tekpos_backup.sql` ko `.gitignore` mein add kiya. Declarative config ka fayda practically samjha — Compose khud figure out karta hai kya change hua, sirf diff apply karta hai.
+
+---
+
+## Week 6 Complete — Oct 2026
+
+**SSH + Linux permissions + systemd + Security & Cryptography**
+
+DigitalOcean tutorials padhe — SSH keys (Steps 1–4), Linux file ownership & permissions, systemd/systemctl. Teen key files ka role clear hua: `authorized_keys` (server pe allowed public keys), `known_hosts` (client pe trusted servers), `~/.ssh/config` (client pe per-host settings). File permissions ka `rwx` system solidly samjha — `chmod 700 ~/.ssh`, `chmod 600 id_ed25519` kyun hota hai ab crystal clear hai. systemd mein service lifecycle — start/stop/restart/reload, enable vs start ka fark (boot pe chahiye vs abhi chahiye), `systemctl status` se logs aur health ek jagah.
+
+Railway pe Vionaut explore kiya — `railway logs`, `railway status`, build logs aur deploy logs live dekhe. Logs se samjha: har line mein timestamp, log level (`INFO`), requestId, method, route, status, durationMs hota hai — ye structured logging hai, unstructured `console.log` nahi. `/health` aur `/api/internal/generation-slo` har ~5 min mein `HEAD` method se hit ho rahi thi — ye Railway ka healthcheck hai (deploy config mein `/health` path, 120s timeout set tha). Real user requests `GET`/`POST` hote hain, `HEAD` nahi — isliye healthcheck traffic alag identify kiya ja sakta hai. Dashboard se: deploy `railway up` CLI se hota hai, GitHub auto-deploy nahi; builder Dockerfile se kaam karta hai (`apps/backend/Dockerfile`); restart policy `on failure` max 3 retries — exactly `systemd` ka `Restart=on-failure`; 17 env vars Railway dashboard mein set hain, `.env` file server pe kabhi nahi jaati. Build logs mein Docker layer caching practically dikhi — unchanged `package.json` wale steps `cached` the, sirf changed source code dobara build hua.
+
+systemd vs Railway ek line mein: systemd ek actual Linux server pe process manage karta hai, Railway ek Docker container manage karta hai cloud pe — lekin dono ka kaam same hai: start karo, crash pe restart karo, logs collect karo.
+
+Missing Semester 2020 L9 (Security & Cryptography) dekhi. Key concepts: entropy (password randomness bits mein), hash functions (deterministic, non-invertible, collision resistant), key derivation functions (deliberately slow — brute force rokne ke liye), symmetric vs asymmetric cryptography, signing & verification, hybrid encryption (asymmetric se symmetric key exchange, symmetric se actual data encrypt). Salt ka purpose samjha — same password ka same hash rainbow tables se map ho jaata, salt se har user ka hash unique hota hai. SSH ka key pair isi asymmetric cryptography pe based hai — jo Week 3 mein TLS mein padha tha, aur Week 6 mein SSH mein practically dekha.

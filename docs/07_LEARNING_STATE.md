@@ -29,7 +29,7 @@ Update **every week**, at the end of the session. Be brutally honest — an infl
 
 ---
 
-## Current state — last updated: **Week 5 end (Oct 2026)**
+## Current state — last updated: **Week 6 end (Oct 2026)**
 
 ### Foundations (Track 0)
 | Skill | Level | Notes |
@@ -44,14 +44,14 @@ Update **every week**, at the end of the session. Be brutally honest — an infl
 | SQL | 🟡 | **Biggest gap.** Runs Prisma/Mongoose without knowing generated SQL |
 | Database concepts (indexes, transactions, ACID) | 🟡 | Follows TekPOS `$transaction` rule without knowing why |
 | Docker | 🟡 | Runs containers; images vs volumes vs layers undifferentiated (→ 228 GB `Docker.raw`) |
-| Linux / servers / SSH | 🟠 | Deploys TekPOS via runbook; systemd, permissions, logs unclear |
+| Linux / servers / SSH | 🟠 | Concepts clear (`authorized_keys`, `known_hosts`, `systemctl`, `rwx`). Hands-on SSH pending — no server to practice on. |
 | Networking (ports, TCP, DNS) | 🟠 | |
 | How programs run (process/thread/memory) | 🔴 | |
 | Concurrency vs parallelism | 🔴 | |
 | Testing (unit/integration, pytest) | 🔴 | |
 | Debugging with a debugger | 🔴 | Currently debugs by pasting errors into Claude |
 | Reading stack traces | 🟠 | |
-| Security / secrets management | 🟠 | Uses `.env`; no threat model |
+| Security / secrets management | 🟡 | Uses `.env`; no threat model |
 
 ### Languages
 | Skill | Level | Notes |
@@ -122,3 +122,4 @@ Update **every week**, at the end of the session. Be brutally honest — an infl
 | Week 4 | SQL | 🔴 → 🟡 | SQLBolt + Select Star SQL + TekPOS pe raw queries chalai — JOIN aur GROUP BY hands-on kiya |
 | Week 4 | Database concepts | 🔴 → 🟡 | $transaction ka purpose samjha — BEGIN/COMMIT/ROLLBACK TekPOS wastage example se |
 | Week 5 | Docker | 🟠 → 🟡 | docker-compose.yml from scratch, named volume, pg_dumpall — image/container/volume fark clear |
+| Week 6 | Security / secrets | 🟠 → 🟡 | L9 crypto concepts + SSH key pair ko TLS (Week 3) se connect kiya |
