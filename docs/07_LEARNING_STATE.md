@@ -42,7 +42,7 @@ Update **every week**, at the end of the session. Be brutally honest — an infl
 | Auth (JWT/OAuth/API keys) | 🟡 | Uses Clerk; doesn't know what it does underneath |
 | Webhooks | 🟠 | Vionaut has one (Clerk→Svix); mechanism unclear |
 | SQL | 🟡 | **Biggest gap.** Runs Prisma/Mongoose without knowing generated SQL |
-| Database concepts (indexes, transactions, ACID) | 🟡 | Follows TekPOS `$transaction` rule without knowing why |
+| Database concepts (indexes, transactions, ACID) | 🟡 | Follows TekPOS `$transaction` rule without knowing why. indexes, ACID, N+1 conceptually covered, hands-on nahi. |
 | Docker | 🟡 | Runs containers; images vs volumes vs layers undifferentiated (→ 228 GB `Docker.raw`) |
 | Linux / servers / SSH | 🟠 | Concepts clear (`authorized_keys`, `known_hosts`, `systemctl`, `rwx`). Hands-on SSH pending — no server to practice on. |
 | Networking (ports, TCP, DNS) | 🟠 | |
