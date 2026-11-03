@@ -46,10 +46,10 @@ Update **every week**, at the end of the session. Be brutally honest — an infl
 | Docker | 🟡 | Runs containers; images vs volumes vs layers undifferentiated (→ 228 GB `Docker.raw`) |
 | Linux / servers / SSH | 🟠 | Concepts clear (`authorized_keys`, `known_hosts`, `systemctl`, `rwx`). Hands-on SSH pending — no server to practice on. |
 | Networking (ports, TCP, DNS) | 🟠 | |
-| How programs run (process/thread/memory) | 🔴 | |
-| Concurrency vs parallelism | 🔴 | |
+| How programs run (process/thread/memory) | 🟠 | |
+| Concurrency vs parallelism | 🟠 | |
 | Testing (unit/integration, pytest) | 🔴 | |
-| Debugging with a debugger | 🔴 | Currently debugs by pasting errors into Claude |
+| Debugging with a debugger | 🟠 | Currently debugs by pasting errors into Claude |
 | Reading stack traces | 🟠 | |
 | Security / secrets management | 🟡 | Uses `.env`; no threat model |
 
@@ -99,7 +99,7 @@ Update **every week**, at the end of the session. Be brutally honest — an infl
 ---
 
 ## Concepts currently confusing me
-*Living list. Add the moment something doesn't land; remove when it clicks. The Tutor Chat should attack this list first.*
+*Living list. Add the moment something doesn't land; remove when it clicks. The Tutor Chat should attack this list first.*thread crash vs process, blocking = thread block (CPU nahi).
 
 
 
@@ -123,3 +123,4 @@ Update **every week**, at the end of the session. Be brutally honest — an infl
 | Week 4 | Database concepts | 🔴 → 🟡 | $transaction ka purpose samjha — BEGIN/COMMIT/ROLLBACK TekPOS wastage example se |
 | Week 5 | Docker | 🟠 → 🟡 | docker-compose.yml from scratch, named volume, pg_dumpall — image/container/volume fark clear |
 | Week 6 | Security / secrets | 🟠 → 🟡 | L9 crypto concepts + SSH key pair ko TLS (Week 3) se connect kiya |
+| Week 7 | Debugging | 🔴 → 🟠 | VS Code debugger se merge sort ke 4 bugs, breakpoints + Variables + Call Stack |

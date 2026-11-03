@@ -79,17 +79,17 @@
 - [ ] cron, `journalctl` — not covered, Next bucket
 - [x] Update `07_LEARNING_STATE.md`
 
-## Week 7 — How programs actually run
-- [ ] Crash Course Computer Science ep. 1–20 (gym/commute)
-- [ ] Rob Pike — "Concurrency is not Parallelism"
-- [ ] Missing Semester **2026 L4**: Debugging and Profiling
-- [ ] **Deliverable:** `LEARNING_LOG.md` entry explaining in own words — process vs thread, blocking vs non-blocking, concurrency vs parallelism, UTF-8
-- [ ] Update `07_LEARNING_STATE.md`
+## Week 7 — How programs actually run ✅
+- [x] Crash Course Computer Science — 7 episodes (target 5-8)
+- [x] Rob Pike — "Concurrency is not Parallelism"
+- [x] Missing Semester 2026 L4: Debugging and Profiling
+- [x] **Deliverable:** LEARNING_LOG entry — process vs thread, blocking vs non-blocking, concurrency vs parallelism, UTF-8
+- [x] Update `07_LEARNING_STATE.md`
 
 ## Week 8 — Testing & debugging + GATE
 - [ ] Julia Evans debugging posts
-- [ ] Missing Semester **2026 L4**: Debugging and Profiling (if not watched in Week 7 — covers debuggers, profiling)
-- [ ] Learn a real debugger (VS Code breakpoints or `pdb`)
+- [x] Missing Semester **2026 L4**: Debugging and Profiling (if not watched in Week 7 — covers debuggers, profiling)
+- [~] Learn a real debugger (VS Code breakpoints or `pdb`)
 - [ ] **Deliverable:** debug one real Vionaut or TekPOS bug using a debugger, zero print statements
 - [ ] Can do: read a stack trace to the right line, build a minimal reproduction, explain logging levels vs print
 - [ ] 🚩 **PHASE GATE:** take 30 lines Claude wrote for Vionaut/TekPOS. Annotate every line: understood / not understood. If >30% is "not understood," repeat the weakest week before Phase 0.

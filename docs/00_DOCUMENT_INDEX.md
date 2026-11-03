@@ -7,8 +7,8 @@
 ## 1. Current state pointer
 
 > **Phase:** -1 (Foundations)
-> **Week:** 7 of 8
-> **Active doc:** `06_EXECUTION_PLAN.md` → Week 7 (How programs actually run)
+> **Week:** 8 of 8
+> **Active doc:** `06_EXECUTION_PLAN.md` → Week 8 (Testing & debugging + GATE)
 > **Next gate:** Week 8 — can read Claude-written code and mark understood vs not understood
 > **Repo:** `/Users/dakshgoel/Desktop/jarvis` · public from day one
 

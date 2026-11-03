@@ -106,3 +106,21 @@ Railway pe Vionaut explore kiya — `railway logs`, `railway status`, build logs
 systemd vs Railway ek line mein: systemd ek actual Linux server pe process manage karta hai, Railway ek Docker container manage karta hai cloud pe — lekin dono ka kaam same hai: start karo, crash pe restart karo, logs collect karo.
 
 Missing Semester 2020 L9 (Security & Cryptography) dekhi. Key concepts: entropy (password randomness bits mein), hash functions (deterministic, non-invertible, collision resistant), key derivation functions (deliberately slow — brute force rokne ke liye), symmetric vs asymmetric cryptography, signing & verification, hybrid encryption (asymmetric se symmetric key exchange, symmetric se actual data encrypt). Salt ka purpose samjha — same password ka same hash rainbow tables se map ho jaata, salt se har user ka hash unique hota hai. SSH ka key pair isi asymmetric cryptography pe based hai — jo Week 3 mein TLS mein padha tha, aur Week 6 mein SSH mein practically dekha.
+
+---
+
+## Week 7 Complete — Nov 2026
+
+**Process vs Thread, Blocking vs Non-blocking, Concurrency vs Parallelism, UTF-8 + Crash Course CS**
+
+Process aur thread ka fark finally samjha. Process ek running program hai — apni alag memory, apna alag space. Thread process ke andar ka worker hai — process ki memory share karta hai, isliye light weight hota hai. Ek process mein multiple threads ho sakte hain jo ek saath kaam karte hain. Ek thread mar jaaye toh poora process nahi marta zaruri, lekin agar memory corrupt ho toh ho sakta hai. Deadlock ka naam suna tha pehle — wo tab hota hai jab do threads ek doosre ka wait kar rahe hote hain, dono stuck.
+
+Blocking vs non-blocking ek important shift tha. Blocking call matlab CPU wahan baitha rahega jab tak kaam khatam na ho — file read, network request, kuch bhi. Non-blocking matlab CPU request bhejta hai OS ko, aur waapis chhale jaata hai kaam karne — jab disk ya network ready ho toh notify karta hai. Key insight ye thi ki file actually disk read karta hai, CPU nahi — toh CPU ko block karna wasteful hai. Node.js isliye fast hai even ek thread mein — wo blocking I/O nahi karta.
+
+Concurrency vs parallelism — Rob Pike ka talk dekha. Ye sabse clear ho gaya ek line mein: ek chef do dishes alternate karke banaye toh concurrency, do chefs ek saath alag alag dishes banayein toh parallelism. Concurrency structure hai — "main multiple kaam handle kar sakta hoon". Parallelism execution hai — "main multiple kaam ek hi waqt pe kar raha hoon". Concurrency se parallelism enable hota hai, lekin dono alag hain.
+
+UTF-8 mein ek surprise tha. Pehle socha tha ki 'A' aur 'अ' dono ek character hain toh same bytes kyun nahi. Answer: Unicode har character ko ek number deta hai — 'A' ko 65, 'अ' ko 2309. UTF-8 un numbers ko bytes mein encode karta hai, aur encoding ka size depend karta hai number ke size pe. Chhota number = kam bits = kam bytes. 'A' = 1 byte, 'अ' = 3 bytes, emoji = 4 bytes. Character ka naam matter nahi karta — uska Unicode number matter karta hai.
+
+Exercises bhi kiye — merge sort ko VS Code debugger se step-through kiya aur 4 bugs fix kiye (breakpoints, Variables panel, Call Stack sab use kiya). `python3 -m http.server 4444` chalaya, `lsof -i:4444` se PID dhundha, `kill` se band kiya. Linux "everything is a file" concept practically samjha — network socket bhi file hai, isliye `lsof` (list open files) usse dhundh leta hai.
+
+Crash Course CS ke 7 episodes dekhe — Binary/Numbers, RAM, CPU, CPU Instructions, OS, Storage, aur Advanced CPU. Sabse kaam ki cheezein: RAM aur CPU ka connection (Fetch-Decode-Execute cycle, clock), OS ka kaam (multitasking, virtual memory, memory protection), aur pipelining (ek clock cycle mein ek instruction complete — Fetch/Decode/Execute parallel chalte hain alag instructions pe). Cache bhi samjha — CPU ke paas thoda fast RAM hota hai, cache hit = fast, cache miss = RAM jaao slow.
