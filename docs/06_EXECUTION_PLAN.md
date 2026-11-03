@@ -28,8 +28,8 @@
 | L2: Shell Tools & Scripting | ✅ Covered via Tutor chat exercises |
 | L4: Data Wrangling | ✅ Covered via Tutor chat exercises |
 | Week 2 — Git | → **L5: Version Control and Git** |
-| Week 6 — Linux/servers | → **L2: Command-line Environment** + **L4: Debugging & Profiling** |
-| Week 7 — How programs run | → **L4: Debugging & Profiling** (partial) |
+| Week 6 — Linux/servers | → ✅ L2 (done Week 1); L6 skipped (Next bucket) |
+| Week 7 — How programs run | → ✅ L4: Debugging & Profiling (done Week 7) |
 | (new in 2026, no 2020 equivalent) | L3: Development Environment and Tools |
 | (new in 2026, no 2020 equivalent) | L6: Packaging and Shipping Code |
 | (new in 2026, bonus) | L7: Agentic Coding |
@@ -44,22 +44,22 @@
 - [x] `.gitignore` written — `.env` + `.env.local` protected, verified with `git status`
 - [x] Update `07_LEARNING_STATE.md`
 
-## Week 3 — HTTP, APIs, auth
+## Week 3 — HTTP, APIs, auth ✅
 - [x] MDN HTTP guide: Overview, Messages, Methods, Status codes, Headers, CORS
 - [x] howdns.works comic
 - [x] Cloudflare Learning Center: DNS, TLS basics
 - [x] **Deliverable:** curl every Vionaut staging endpoint, document request/response shapes by hand
-- [x] Can explain: idempotency, Bearer vs API key vs JWT, what Clerk+Svix webhook actually does, what Arcjet rate limiting does
+- [~] Can explain: idempotency, Bearer vs API key vs JWT. Clerk+Svix webhook aur Arcjet sirf surface level, deep dive Next bucket
 - [x] Update `07_LEARNING_STATE.md`
 
-## Week 4 — SQL & databases
+## Week 4 — SQL & databases ✅
 - [x] SQLBolt (all lessons)
 - [x] Select Star SQL (at least half)
 - [x] **Deliverable:** open local TekPOS Postgres, write raw SQL for 3 queries the app does via Prisma, compare output and shape
 - [x] Can explain: JOIN types, indexes, transactions/ACID, N+1 problem, what `$transaction` protects against in TekPOS (indexes/ACID/N+1 covered in Tutor chat, Week 7-8 ke beech)
 - [x] Update `07_LEARNING_STATE.md`
 
-## Week 5 — Docker for real
+## Week 5 — Docker for real ✅
 - [x] Docker "Get Started" official guide
 - [-] Julia Evans — How Containers Work - skipped — deliverable complete without it, Next bucket
 - [x] **Deliverable:** write `docker-compose.yml` from scratch for TekPOS Postgres, named volume, documented `pg_dumpall` backup command
@@ -76,7 +76,7 @@
 - [-] Original deliverable (SSH into Hostinger) — no server available
 - [x] Replacement deliverable: Railway logs, deploy config, build logs explored
 - [x] Can explain: SSH key asymmetry, systemd lifecycle, restart policy
-- [ ] cron, `journalctl` — not covered, Next bucket
+- [-] cron, `journalctl` — not covered, Next bucket
 - [x] Update `07_LEARNING_STATE.md`
 
 ## Week 7 — How programs actually run ✅
@@ -102,9 +102,8 @@
 ## Week 9 — Python basics + repo init
 - [ ] Automate the Boring Stuff Part I, Ch. 1–3
 - [ ] Install `uv`, understand venvs
-- [ ] **Deliverable:** create `/Users/dakshgoel/Desktop/jarvis`, `uv init`, first commit, push public
-- [ ] **Deliverable:** port `status.sh` (week 1) to Python
-- [ ] Add `08_CLAUDE.md` + `09_PROJECT_RULES.md` to repo root
+- [ ] **Deliverable:** `uv init` inside existing `jarvis` repo (repo Week 1 mein ban chuka hai), first Python commit
+- [x] Add `08_CLAUDE.md` + `09_PROJECT_RULES.md` to repo root
 
 ## Week 10 — Python data & files
 - [ ] Automate the Boring Stuff Ch. 4–6 (lists, dicts, strings)

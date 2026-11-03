@@ -22,14 +22,14 @@ Update **every week**, at the end of the session. Be brutally honest — an infl
 
 ## Instructions to any AI reading this file
 
-1. **Never assume a skill above the level listed here**, even if the project stack implies it. Daksh uses Prisma daily and SQL is 🔴 — that combination is normal and expected.
+1. **Never assume a skill above the level listed here**, even if the project stack implies it. Daksh uses Prisma daily and SQL is 🟡 — that combination is normal and expected.
 2. When explaining, target one level above current: for 🟠, explain the mental model; for 🟡, explain the edge cases; for 🟢, skip to the point.
 3. If a task needs a 🔴/🟠 skill, **say so before giving the solution.** "Ye karne se pehle ek cheez samajhni hogi..." is more useful than working code.
 4. Never hand over code that requires an unlisted skill without flagging it.
 
 ---
 
-## Current state — last updated: **Week 6 end (Oct 2026)**
+## Current state — last updated: **Week 7 end (Nov 2026)**
 
 ### Foundations (Track 0)
 | Skill | Level | Notes |
@@ -38,18 +38,18 @@ Update **every week**, at the end of the session. Be brutally honest — an infl
 | Bash scripting | 🟠 | Can read and write simple scripts. Knows `set -x`, `chmod +x`, `#!/bin/bash`. `status.sh` written and working. |
 | Git — daily commands | 🟡 | add/commit/push/branch/merge comfortable. Relative refs (`HEAD^`, `HEAD~3`) clear. |
 | Git — mental model | 🟡 | Commits as snapshots+pointers, branches as pointers clear. `reflog` vs `git log` understood. Rebase mental model solid. Still shaky: merge conflicts in complex scenarios. |
-| HTTP / REST | 🟡 | Builds and calls APIs; status codes, headers, idempotency vague |
-| Auth (JWT/OAuth/API keys) | 🟡 | Uses Clerk; doesn't know what it does underneath |
+| HTTP / REST | 🟡 | Status codes, headers, CORS clear (Vionaut endpoints curl se dekhe). Idempotency vague. |
+| Auth (JWT/OAuth/API keys) | 🟡 | Bearer token flow clear (Clerk secret → user → session → JWT → header, curl se verify). Clerk internals aur OAuth abhi nahi. |
 | Webhooks | 🟠 | Vionaut has one (Clerk→Svix); mechanism unclear |
-| SQL | 🟡 | **Biggest gap.** Runs Prisma/Mongoose without knowing generated SQL |
-| Database concepts (indexes, transactions, ACID) | 🟡 | Follows TekPOS `$transaction` rule without knowing why. indexes, ACID, N+1 conceptually covered, hands-on nahi. |
-| Docker | 🟡 | Runs containers; images vs volumes vs layers undifferentiated (→ 228 GB `Docker.raw`) |
+| SQL | 🟡 | SELECT/JOIN/GROUP BY, 3 TekPOS Prisma queries raw SQL mein compare kiye. Gap: indexes ka hands-on, query plans. |
+| Database concepts (indexes, transactions, ACID) | 🟡 | `$transaction` ka purpose clear (BEGIN/COMMIT/ROLLBACK). Indexes, ACID, N+1 conceptually covered, hands-on nahi. |
+| Docker | 🟡 | Image vs container vs volume clear. Compose + named volume + `pg_dumpall` hands-on kiya. |
 | Linux / servers / SSH | 🟠 | Concepts clear (`authorized_keys`, `known_hosts`, `systemctl`, `rwx`). Hands-on SSH pending — no server to practice on. |
 | Networking (ports, TCP, DNS) | 🟠 | |
 | How programs run (process/thread/memory) | 🟠 | |
 | Concurrency vs parallelism | 🟠 | |
 | Testing (unit/integration, pytest) | 🔴 | |
-| Debugging with a debugger | 🟠 | Currently debugs by pasting errors into Claude |
+| Debugging with a debugger | 🟠 | VS Code debugger se merge sort ke 4 bugs. Real Vionaut/TekPOS bug pending (Week 8). |
 | Reading stack traces | 🟠 | |
 | Security / secrets management | 🟡 | Uses `.env`; no threat model |
 
@@ -61,7 +61,7 @@ Update **every week**, at the end of the session. Be brutally honest — an infl
 | Python | 🔴 | |
 | Async Python | 🔴 | |
 | Pydantic / type hints | 🔴 | |
-| Bash | 🔴 | |
+| Bash | 🟠 | |
 | C / C++ (Arduino, ESP32) | 🔴 | Phase 4 |
 
 ### AI / agents
@@ -99,8 +99,9 @@ Update **every week**, at the end of the session. Be brutally honest — an infl
 ---
 
 ## Concepts currently confusing me
-*Living list. Add the moment something doesn't land; remove when it clicks. The Tutor Chat should attack this list first.*thread crash vs process, blocking = thread block (CPU nahi).
-
+*Living list. Add the moment something doesn't land; remove when it clicks. The Tutor Chat should attack this list first.*
+- Thread ka fatal crash poore process ko kab girata hai (memory shared hai)
+- Blocking call mein wo *thread* block hota hai jisne call kiya, CPU nahi
 
 
 ---
